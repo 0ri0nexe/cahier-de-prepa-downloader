@@ -140,7 +140,7 @@ def start():
         print("Page", p, ":", pages[p].replace(" / ", "/"))
 
         for d in docs[p]:
-            dl = session.get(base_url + "/download?id=" + str(d) + "&dl")
+            dl = session.get(base_url + "/download?id=" + d + "&dl")
             # &dl argument is needed because some documents offers previews
             # (some videos for example)
 
