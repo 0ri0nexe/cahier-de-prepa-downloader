@@ -116,7 +116,7 @@ def start():
 
         docs[explore_page] = {}
         for d in sec.find_all("p", "doc"):
-            download_args:str = d.find("a", href=re.compile("download"))["href"].replace("download?id=", "")
+            download_args: str = d.find("a", href=re.compile("download"))["href"].replace("download?id=", "")
             docs[explore_page][download_args] = d.find("span", "nom").string
 
 
